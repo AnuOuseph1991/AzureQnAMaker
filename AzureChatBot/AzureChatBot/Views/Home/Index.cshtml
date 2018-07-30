@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<div class="jumbotron">
+    <h1>ASP.NET azure Chat Bot QnA maker!!!</h1>
+    <p class="lead">Qna Maker Smaple</p>
+    <p><a href="" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row" style="position: fixed; bottom: 0">
+   
+</div>
+<script type="text/javascript">
+
+    (function () {
+        var div = document.createElement("div");
+        document.getElementsByTagName('body')[0].appendChild(div);
+        div.outerHTML = "<div id='botDiv' style='height: 38px; position: fixed; bottom: 0; z-index: 1000; background-color: #fff'><div id='botTitleBar' style='height: 38px; width: 400px; position:fixed; cursor: pointer;'></div><iframe width='400px' height='600px' src='YOUR EmBed URL'></iframe></div>";
+
+        document.querySelector('body').addEventListener('click', function (e) {
+            e.target.matches = e.target.matches || e.target.msMatchesSelector;
+            if (e.target.matches('#botTitleBar')) {
+                var botDiv = document.querySelector('#botDiv');
+                botDiv.style.height = botDiv.style.height == '600px' ? '38px' : '600px';
+            };
+        });
+    }());
+</script>
