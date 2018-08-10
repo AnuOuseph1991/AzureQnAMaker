@@ -26,7 +26,5 @@ namespace AzureChatBot.Controllers
 
             return View();
         }
-		
-		
     }
 }
